@@ -1,0 +1,55 @@
+<<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootleg</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+
+        <a-assets>
+
+            <a-asset-item id="monitos" src="./assets/monitos.gltf"></a-asset-item>
+            <a-asset-item id="mono1" src="./assets/mono1.gltf"></a-asset-item>
+            <img id="dolor" src="./assets/dolor.jpg" >
+
+        </a-assets>
+
+        <a-entity environment="preset: tron; groundColor: #445; grid: cross"></a-entity>
+
+        <a-imagen scale="10 10 10 " src="./assets/dolor.jpg" position="1 2 3"></a-imagen>
+
+        <a-entity gltf-model="#monitos" scale="5.850 7.760 6.848" position="-0.287 -1.254 0.000"></a-entity>
+        
+        <a-entity gltf-model="#mono1" rotation="0.00 -352 0.00" scale="21.085 25.682 31.944" position="0.000 3.027 26.748"
+
+         light="intensity:  1.16;  type:  ambient" position="1.560 29.086 0.476" ></a-entity>
+
+        animation="property:position;
+        to:0 4 4;
+        dur:2000;
+        loop:true;
+        dir:alternate;
+        easing: easeInCirc"
+        
+        animation__rotation="property:rotation;
+        to :0 360 0;
+        dur:2000;
+        loop:true;
+        dir:alternate;"
+        
+        animation__color="property:color;
+        to :#4CC3D9;
+        dur:2000;
+        loop:true;
+        dir:alternate;"></a-entity>
+
+    </a-scene>
+</body>
+
+</html>
